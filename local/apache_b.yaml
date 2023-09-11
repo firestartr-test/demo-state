@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: apache_b
+  name: apache-b
   annotations:
     argocd.argoproj.io/sync-wave: "2"
 
