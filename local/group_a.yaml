@@ -9,7 +9,7 @@ spec:
   type: business-unit
   profile:
     displayName: testGroupa
-    email: foo@foo.com
+    email: fooooooo@foo.com
     picture: https://example.com/foo
   children: []
   members: []
