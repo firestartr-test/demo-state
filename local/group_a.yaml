@@ -3,13 +3,12 @@ kind: FirestarterGithubGroup
 metadata:
   name: group-a
   annotations:
-    fire-starter.dev/uuid: aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaa
-    fire-starter.dev/apply: "true"
 spec:
+  uuid: aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
   type: business-unit
   profile:
     displayName: testGroupa
-    email: fooooooo@foo.com
-    picture: https://example.com/foo
+    email: foo@foo.com
+    picture: https://example.com/groups/bu-infrastructure.jpeg
   children: []
   members: []
