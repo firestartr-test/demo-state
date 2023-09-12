@@ -1,0 +1,15 @@
+apiVersion: firestarter.dev/v1
+kind: FirestarterGithubGroup
+metadata:
+  name: group-a
+  annotations:
+    fire-starter.dev/uuid: aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaa
+    fire-starter.dev/apply: "true"
+spec:
+  type: business-unit
+  profile:
+    displayName: testGroupa
+    email: foo@foo.com
+    picture: https://example.com/foo
+  children: []
+  members: []
