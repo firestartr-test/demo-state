@@ -12,6 +12,8 @@ spec:
   lifecycle: production
   owner: group-x
   platformOwner: group-x
+  maintainedBy:
+    - "group-x"
   provisioner:
     org: prefapp
     orgVisibility: false
