@@ -3,7 +3,7 @@ kind: FirestarterGithubRepositoryFeature
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "-5"
-  name: react-app
+  name: react-app-a
 spec:
   uuid: uuid-test-demo-a-tech-docs-11111
   type: tech_docs
