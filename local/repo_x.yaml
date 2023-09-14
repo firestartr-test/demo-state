@@ -1,7 +1,7 @@
 apiVersion: firestarter.dev/v1
 kind: FirestarterGithubRepository
 metadata:
-  name: test-demo-a
+  name: test-demo-x
   annotations:
     argocd.argoproj.io/sync-wave: "-10"
     backstage.io/source-location: url:https://github.com/prefapp/catalog
