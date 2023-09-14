@@ -1,0 +1,32 @@
+apiVersion: firestarter.dev/v1
+kind: FirestarterGithubRepository
+metadata:
+  name: test-demo-a
+  annotations:
+    argocd.argoproj.io/sync-wave: "-10"
+    backstage.io/source-location: url:https://github.com/prefapp/catalog
+    github.com/project-slug: org/component_a
+spec:
+  uuid: aaaaaaaa-aaaa-1111-aaaa-aaaaaaaaaaaa
+  type: service
+  lifecycle: production
+  owner: group-x
+  provisioner:
+    org: prefapp
+    orgVisibility: false
+    orgContributions: false
+    technology:
+      stack: node
+      version: "18"
+    repo:
+      visibility: private
+      ciSystem: github
+      defaultBranch: main
+      branchStrategy: none
+      branches:
+        protections:
+          override:
+            is_override: false
+            number_reviewer: null
+    features: []
+  system: system_a

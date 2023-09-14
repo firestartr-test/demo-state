@@ -1,11 +1,11 @@
 apiVersion: firestarter.dev/v1
 kind: FirestarterGithubGroup
 metadata:
-  name: group-a
+  name: group-z
   annotations:
     argocd.argoproj.io/sync-wave: "-20"
 spec:
-  uuid: aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+  uuid: aaaaaaaa-aaaa-2222-aaaa-aaaaaaaaaaaa
   type: business-unit
   profile:
     displayName: testGroupa
