@@ -11,6 +11,7 @@ spec:
   type: service
   lifecycle: production
   owner: group-z
+  platformOwner: group-z
   provisioner:
     org: prefapp
     orgVisibility: false
