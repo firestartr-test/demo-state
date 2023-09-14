@@ -5,7 +5,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "-5"
   name: react-app-x
 spec:
-  uuid: uuid-test-demo-x-tech-docs-11111
+  uuid: 01951f6f-8e5e-4d90-95d3-a94efb7d389c
   type: tech_docs
   version: v0.6.1
   repositoryTarget:

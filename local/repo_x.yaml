@@ -7,7 +7,7 @@ metadata:
     backstage.io/source-location: url:https://github.com/prefapp/catalog
     github.com/project-slug: org/component_a
 spec:
-  uuid: aaaaaaaa-aaaa-1111-aaaa-aaaaaaaaaaaa
+  uuid: 0c739e74-5df6-4452-881d-5ca4570b8133
   type: service
   lifecycle: production
   owner: group-x

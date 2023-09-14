@@ -5,7 +5,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "-20"
 spec:
-  uuid: aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+  uuid: c9bf9412-8440-4fdc-a0ec-1f811296058f
   type: business-unit
   profile:
     displayName: testGroupa
