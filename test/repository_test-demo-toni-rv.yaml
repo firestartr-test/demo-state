@@ -1,0 +1,70 @@
+apiVersion: firestarter.dev/v1
+kind: FirestarterGithubRepository
+metadata:
+  name: test-demo-toni-rv
+spec:
+  org: firestarter-test
+  firestarter:
+    tfStateKey: c4975e4c-f81f-4ec4-9b3f-68eb892710e9
+    technology:
+      stack: example-stack
+      version: "1.0"
+    type: service
+    lifecycle: development
+    system: example-system
+  repo:
+    allowMergeCommit: true
+    allowSquashMerge: true
+    allowRebaseMerge: true
+    allowAutoMerge: true
+    deleteBranchOnMerge: true
+    autoInit: true
+    archiveOnDestroy: false
+    allowUpdateBranch: true
+    hasIssues: true
+    visibility: private
+    defaultBranch: main
+    codeowners: example-codeowners
+  actions:
+    oidc:
+      useDefault: true
+      includeClaimKeys: []
+  permissions:
+    - role: admin
+      ref:
+        kind: FirestarterGithubMembership
+        name: arvegadev
+        needsSecret: false
+    - role: push
+      ref:
+        kind: FirestarterGithubGroup
+        name: group-a
+        needsSecret: true
+    - role: admin
+      ref:
+        kind: FirestarterGithubGroup
+        name: group-b
+        needsSecret: true
+    - role: pull
+      ref:
+        kind: FirestarterGithubGroup
+        name: group-c
+        needsSecret: true
+  branchProtections:
+    - branch: main
+      statusChecks:
+        - check1
+        - check2
+      requiredReviewersCount: 2
+      requiredCodeownersReviewers: true
+      enforceAdmins: true
+      requireSignedCommits: true
+      requireConversationResolution: true
+  writeConnectionSecretToRef:
+    name: firestartergithubrepository-test-demo-a-outputs
+    outputs:
+      - key: repoId
+      - key: nodeId
+      - key: fullName
+      - key: htmlUrl
+      - key: sshCloneUrl
