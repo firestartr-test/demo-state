@@ -1,0 +1,19 @@
+apiVersion: firestarter.dev/v1
+kind: FirestarterGithubMembership
+metadata:
+  name: arvegadev
+spec:
+  org: firestarter-test
+  firestarter:
+    tfStateKey: abaeaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa
+    catalog:
+      - kind: user
+        name: arvegadev
+        profile:
+          displayName: toni
+          email: foo@foo.foo
+          picture: "https.//mypicture.com/profile/picture.jpeg"
+  role: admin
+  writeConnectionSecretToRef:
+    name: firestartergithubmembership-arvegadev-outputs
+    outputs: []
