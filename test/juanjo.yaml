@@ -1,0 +1,19 @@
+apiVersion: firestarter.dev/v1
+kind: FirestarterGithubMembership
+metadata:
+  name: juanjosevazquezgil
+spec:
+  org: firestarter-test
+  firestarter:
+    tfStateKey: aaaeaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa
+    catalog:
+       - kind: user
+         name: juanjosevazquezgil
+         profile:
+           displayName: juanjo
+           email: foo@foo.foo1
+           picture: 'https.//mypicture.com/profile/picture.jpeg'
+  role: member
+  writeConnectionSecretToRef:
+    name: firestartergithubmembership-juanjosevazquezgil-outputs
+    outputs: []
