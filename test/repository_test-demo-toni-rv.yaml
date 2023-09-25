@@ -24,7 +24,7 @@ spec:
     hasIssues: true
     visibility: private
     defaultBranch: main
-    codeowners: example-codeowners
+    codeowners: test
   actions:
     oidc:
       useDefault: true
