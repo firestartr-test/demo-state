@@ -1,0 +1,31 @@
+apiVersion: firestarter.dev/v1
+kind: FirestarterGithubGroup
+metadata:
+  name: group-d
+spec:
+  org: firestarter-test
+  privacy: closed
+  description: "test description"
+
+  members:
+    - ref:
+        kind: FirestarterGithubMembership
+        name: arvegadev
+        needsSecret: false
+
+  firestarter:
+    tfStateKey: daaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa
+    catalog:
+      - name: firestarter-test
+        kind: group
+        type: business-unit
+        profile:
+          displayName: testGroupd
+          email: test@test.test
+
+  writeConnectionSecretToRef:
+    name: firestartergithubgroup-group-d-outputs
+    outputs:
+      - key: id
+      - key: nodeId
+      - key: slug
