@@ -61,7 +61,7 @@ spec:
       requireSignedCommits: true
       requireConversationResolution: true
   writeConnectionSecretToRef:
-    name: firestartergithubrepository-test-demo-a-outputs
+    name: firestartergithubrepository-test-demo-toni-rv-outputs
     outputs:
       - key: repoId
       - key: nodeId
