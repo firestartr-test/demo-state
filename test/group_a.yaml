@@ -22,7 +22,7 @@ spec:
         type: business-unit
         profile:
           displayName: testGroupa
-          email: test@test.test
+          email: test2@test.test
 
   members:
     - ref:
