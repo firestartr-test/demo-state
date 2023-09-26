@@ -6,6 +6,7 @@ metadata:
 spec:
   firestarter:
     tfStateKey: 32752654-b320-448f-b2cc-26c41774a030
+  org: firestarter-test
   type: tech_docs
   version: v0.6.1
   repositoryTarget:
