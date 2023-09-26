@@ -33,7 +33,7 @@ spec:
     - role: admin
       ref:
         kind: FirestarterGithubMembership
-        name: arvegadev
+        name: noexistentusertest
         needsSecret: false
     - role: push
       ref:
