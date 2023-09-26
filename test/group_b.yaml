@@ -10,7 +10,7 @@ spec:
   members:
     - ref:
         kind: FirestarterGithubMembership
-        name: juanjosevazquezgil
+        name: noexistentuser
         needsSecret: false
 
   firestarter:
