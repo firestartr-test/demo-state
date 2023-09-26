@@ -8,6 +8,7 @@ spec:
     tfStateKey: 56289973-e8fe-49b8-b802-74d59447c158
   type: tech_docs
   version: v0.6.1
+  org: firestarter-test  
   repositoryTarget:
     ref:
       kind: FirestarterGithubRepository
