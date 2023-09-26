@@ -2,10 +2,10 @@ apiVersion: firestarter.dev/v1
 kind: FirestarterGithubRepositoryFeature
 metadata:
   annotations:
-  name: mkdocs-32752654-b320-448f-b2cc-26c41774a030
+  name: test-56289973-e8fe-49b8-b802-74d59447c158
 spec:
   firestarter:
-    tfStateKey: 32752654-b320-448f-b2cc-26c41774a030
+    tfStateKey: 56289973-e8fe-49b8-b802-74d59447c158
   type: tech_docs
   version: v0.6.1
   repositoryTarget:
@@ -15,13 +15,13 @@ spec:
       needsSecret: false
     branch: main
   files:
-    - path: mkdocs.yaml
+    - path: test.yaml
       userManaged: true
       content: |-
         c2l0ZV9uYW1lOiAiVGVjaERvY3MiCnNpdGVfZGVzY3JpcHRpb246ICJDdXN0b20gZG9jdW1lbnRh
         dGlvbiIKCm5hdjoKICAtIEludHJvZHVjdGlvbjogaW5kZXgubWQKCnBsdWdpbnM6CiAgLSB0ZWNo
         ZG9jcy1jb3Jl
-    - path: docs/index.md
+    - path: test/index.md
       userManaged: true
       content: |-
         IyBUZWNoRG9jcwoKQ3VzdG9tIGRvY3VtZW50YXRpb24KCiMjIEdldHRpbmcgc3RhcnRlZAoKU3Rh
