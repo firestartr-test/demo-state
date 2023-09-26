@@ -45,11 +45,6 @@ spec:
         kind: FirestarterGithubGroup
         name: group-b
         needsSecret: true
-    - role: pull
-      ref:
-        kind: FirestarterGithubGroup
-        name: group-c
-        needsSecret: true
   branchProtections:
     - branch: main
       statusChecks:
