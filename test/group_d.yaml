@@ -24,7 +24,7 @@ spec:
           email: test@test.test
 
   writeConnectionSecretToRef:
-    name: firestartergithubgroup-group-b-outputs
+    name: firestartergithubgroup-group-d-outputs
     outputs:
       - key: id
       - key: nodeId
