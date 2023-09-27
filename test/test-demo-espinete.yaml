@@ -66,7 +66,7 @@ spec:
       requireSignedCommits: true
       requireConversationResolution: true
   writeConnectionSecretToRef:
-    name: firestartergithubrepository-test-demo-a-outputs
+    name: firestartergithubrepository-test-demo-espinete-outputs
     outputs:
       - key: repoId
       - key: nodeId
