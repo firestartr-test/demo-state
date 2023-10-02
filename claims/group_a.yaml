@@ -4,7 +4,7 @@ displayName: 'group-a'
 description: 'Group a description'
 type: 'business-unit'
 profile:
-  email: 'group-a@a'
+  email: 'group-a@ab'
   picture: 'https://example.com/groups/bu-infrastructure.jpeg'
   children: []
 members:
