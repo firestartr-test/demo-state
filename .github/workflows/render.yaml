@@ -1,4 +1,4 @@
-name: Catalog Reconcile - Redux
+name: CDK8s render
 
 on:
   pull_request:
@@ -6,11 +6,8 @@ on:
       - "claims/**.yaml"
 
 jobs:
+  render:
     runs-on: ubuntu-latest
-    container:
-      credentials:
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - name: Checkout main branch
