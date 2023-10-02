@@ -1,0 +1,47 @@
+name: Catalog Reconcile - Redux
+
+on:
+  pull_request:
+    paths:
+      - "claims/**.yaml"
+
+jobs:
+    runs-on: ubuntu-latest
+    container:
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v3
+        with:
+          ref: main
+          path: main_state
+
+      - name: Checkout new branch (PR head ref)
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          path: desired_state
+
+      - name: Generate app installation token
+        id: generate-token
+        uses: peter-murray/workflow-application-token-action@v2
+        with:
+          application_id: ${{ secrets.APP_ID_GITHUB }}
+          application_private_key: ${{ secrets.APP_PEM_FILE_GITHUB }}
+          organization: prefapp
+
+      - uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          list-files: "json"
+          working-directory: desired_state
+          filters: |
+            changed:
+              - 'claims/**'
+
+      - name: Debug
+        run: |
+          echo "Changed files: ${{ steps.filter.outputs.changed_files }}"
