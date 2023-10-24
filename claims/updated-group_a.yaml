@@ -1,6 +1,6 @@
 kind: GithubGroupClaim
 name: 'group-a'
-displayName: 'group-a'
+displayName: 'updated-group-a'
 description: 'Group a description'
 type: 'business-unit'
 profile:
