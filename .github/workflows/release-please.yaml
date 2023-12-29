@@ -27,6 +27,15 @@ jobs:
 
       - name: Check Workflow Existence
         id: check-workflow-existence
+        run: |
+          if [ -f .github/workflows/build_image.yml ]; then
+            echo "build_image_workflow_exists=true" >> "$GITHUB_OUTPUT"
+          fi
+
+          if [ -f .github/workflows/build_artifact.yml ]; then
+            echo "build_artifact_workflow_exists=true" >> "$GITHUB_OUTPUT"
+          fi
+
 
       - name: Invoke Container Image Publish Workflow
         if: steps.check-workflow-existence.outputs.build_image_workflow_exists
