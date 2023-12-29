@@ -14,3 +14,28 @@ jobs:
         with:
           command: manifest
           default-branch: main
+
+  publish:
+    if: needs.release-please.outputs.releases_created
+    name: Publish
+    needs:
+      - release-please
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Check Workflow Existence
+        id: check-workflow-existence
+
+      - name: Invoke Container Image Publish Workflow
+        if: steps.check-workflow-existence.outputs.build_image_workflow_exists
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: build_image.yml
+
+      - name: Invoke Artifact Publish Workflow
+        if: steps.check-workflow-existence.outputs.build_artifact_workflow_exists
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: build_artifact.yml
